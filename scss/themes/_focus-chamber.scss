@@ -1,0 +1,19 @@
+.theme--focus-chamber {
+    --background: url('/assets/themes/focus-chamber.jpg');
+    --color-text: hsl(0, 0%, 96%);
+    --color-button-border: hsl(0, 0%, 96%);
+    --color-button-bg: hsl(187, 61%, 42%);
+    --color-button-hover: hsl(187, 61%, 25%);
+    --color-button-bg-active: hsl(187, 61%, 42%);
+    --color-icons-bg: hsl(0, 0%, 20%);
+
+    //settings
+    --color-settings-bg: hsl(0, 0%, 0%);
+    --color-settings-text: hsl(0, 0%, 96%);
+    --color-settings-closebtn-hover: hsl(0, 0%, 60%);
+    --color-settings-border: hsl(0, 0%, 30%);
+    --color-settings-active: hsl(0, 0%, 20%);
+    --color-settings-hover: hsl(0, 0%, 12%);
+    --color-settings-divider: hsl(0, 0%, 18%);
+    --color-settings-accent: hsl(187, 61%, 42%);
+}

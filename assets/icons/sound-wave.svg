@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_2_00000103950237492895302590000007461369167997426622_"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+	 style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_00000063635266225289537470000014958879261287838876_);}
+	.st1{fill:none;stroke:#F5F5F5;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{clip-path:url(#SVGID_00000173161645746381049960000015165040915998058895_);}
+	.st3{clip-path:url(#SVGID_00000079447586867992718990000003284978251547988656_);}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="512" height="512"/>
+	</defs>
+	<clipPath id="SVGID_00000072973246177442772460000014852498178782195359_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g style="clip-path:url(#SVGID_00000072973246177442772460000014852498178782195359_);">
+		<path class="st1" d="M65,196v120"/>
+	</g>
+</g>
+<path class="st1" d="M156,136v240"/>
+<g>
+	<defs>
+		<rect id="SVGID_00000151506541542466617740000008802183423344481704_" width="512" height="512"/>
+	</defs>
+	<clipPath id="SVGID_00000116915010911562758340000013311237597457225903_">
+		<use xlink:href="#SVGID_00000151506541542466617740000008802183423344481704_"  style="overflow:visible;"/>
+	</clipPath>
+	<g style="clip-path:url(#SVGID_00000116915010911562758340000013311237597457225903_);">
+		<path class="st1" d="M256,16v480"/>
+	</g>
+</g>
+<path class="st1" d="M356,136v240"/>
+<g>
+	<defs>
+		<rect id="SVGID_00000036229775246368029020000011609944403337338289_" width="512" height="512"/>
+	</defs>
+	<clipPath id="SVGID_00000180355854441510795710000014342623475062644374_">
+		<use xlink:href="#SVGID_00000036229775246368029020000011609944403337338289_"  style="overflow:visible;"/>
+	</clipPath>
+	<g style="clip-path:url(#SVGID_00000180355854441510795710000014342623475062644374_);">
+		<path class="st1" d="M447,196v120"/>
+	</g>
+</g>
+</svg>

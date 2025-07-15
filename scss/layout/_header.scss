@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.app__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-lg;
+
+    @include respond(md) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $spacing-xxxl;
+    }
+    
+    .app-brand {
+        margin-bottom: $spacing-lg;
+
+        @include respond(md) {
+            margin-bottom: 0;
+        }
+
+        &__logo {
+            width: 10.5rem;
+
+            @include respond-down(xs) {
+                width: 8.5rem;
+            }
+
+            @include respond(md) {
+                width: 12rem;
+            }
+        }
+    }
+
+    .app-quote {
+        font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.2;
+        max-width: 20ch;
+        color: var(--color-text);
+    
+        @include respond-down(xs) {
+            font-size: $fs-sm;
+            max-width: none;
+        }
+    }
+}

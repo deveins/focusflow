@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.mode-display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    .mode-tabs {
+        display: flex;
+        gap: $spacing-md;
+        justify-content: center;
+
+        @include respond-down(xs) {
+            flex-direction: column;
+        }
+
+        &__button {
+            padding: $spacing-xxs $spacing-xs;
+            border: 2px solid var(--color-button-border);
+            border-radius: $radius-md;
+            font-weight: 600;
+            color: var(--color-text);
+            background-color: transparent;
+            transition: all 0.3s ease;
+
+            &--active {
+                background-color: var(--color-button-bg-active);
+                border-color: var(--color-button-bg-active);
+            }
+
+            &:hover {
+                background-color: var(--color-button-bg);
+                border-color: var(--color-button-bg);
+            }
+
+            @include respond-down(xs) {
+                padding: $spacing-xxs $spacing-xxs;
+                font-size: $fs-sm;
+            }
+
+            @include respond(sm) {
+                padding: $spacing-xxs $spacing-xl;
+                font-size: $fs-md;
+                border-radius: $radius-lg;
+            }
+
+            @include respond(xl) {
+                font-size: clamp($fs-md, 1.6vw, $fs-md-lg);
+            }
+        }
+    }
+}

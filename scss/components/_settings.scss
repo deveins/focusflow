@@ -1,0 +1,247 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.settings-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: $spacing-lg $spacing-xl;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    color: var(--color-settings-text);
+    background-color: var(--color-settings-bg);
+
+    @include respond(lg) {
+        width: 50vw;
+    }
+
+    &.open-settings {
+        transform: translateX(0%);
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: $spacing-lg;
+
+        h2 {
+            font-size: $fs-md-lg;
+        }
+
+        .settings-panel__close {
+            font-size: $fs-md-lg;
+            font-weight: 600;
+            color: var(--color-settings-text);
+            transition: 0.3s color ease;
+
+            &:hover {
+                color: var(--color-settings-closebtn-hover);
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        height: 100%;
+    }
+    
+    .settings-sidebar {
+        width: 8.5rem;
+        border-right: 2px solid var(--color-settings-divider);
+        display: flex;
+        flex-direction: column;
+        padding-inline-end: $spacing-md;
+
+        @include respond(md) {
+            width: 12.5rem;
+        }
+
+        .settings-nav-item {
+            background: none;
+            border: none;
+            text-align: left;
+            border-radius: $radius-xs;
+            padding: $spacing-xs $spacing-md;
+            margin-block-end: $spacing-sm;
+            color: var(--text);
+            cursor: pointer;
+      
+            &:hover {
+              background: var(--color-settings-hover);
+            }
+      
+            &.active-settings-sidebar {
+              background-color: var(--color-settings-active);
+              color: var(--color-settings-text)
+            }
+        }
+    }
+
+    .settings-main {
+        flex: 1;
+        overflow-y: auto;
+        padding-inline-start: $spacing-xl;
+        padding-bottom: $spacing-xxxl;
+    }
+    
+    .settings-section {
+        display: none;
+    
+        &.active-settings-panel {
+            display: block;
+        }
+    
+        .settings-group {
+
+            h3 {
+                font-size: $fs-md;
+                margin-bottom: $spacing-md;
+            }
+        }
+
+        //Timer-settings
+        .settings-group__inputs {
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-xl;
+        }
+    
+        .input-block {
+            label {
+                display: block;
+                margin-bottom: $spacing-xxs;
+                font-weight: 500;
+            }
+    
+            .input-wrapper {
+                display: flex;
+                align-items: center;
+                padding: $spacing-xxs;
+                justify-content: space-between;
+                border: 2px solid var(--color-settings-border);
+                border-radius: $radius-sm;
+                max-width: 120px;
+    
+                input[type="number"] {
+                    background: transparent;
+                    color: var(--color-settings-text);
+                }
+    
+                .unit {
+                    font-size: $fs-sm;
+                    opacity: 0.6;
+                }
+            }
+        }
+    
+        .auto-start {
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-xxs;
+            margin-top: $spacing-md;
+    
+            label {
+                display: flex;
+                align-items: center;
+                gap: $spacing-xxs;
+    
+                input {
+                    accent-color: var(--color-settings-accent);
+                }
+            }
+        }
+
+        //Themes Settings
+        .theme-options {
+            .theme-cards {
+                display: flex;
+                flex-wrap: wrap;
+                gap: $spacing-lg;
+                justify-content: flex-start;
+    
+                .theme-card {
+                    width: 12rem;
+                    height: 6rem;
+                    cursor: pointer;
+                    border-radius: $radius-lg;
+                    transition: all 0.3s ease;
+                    transform-origin: center;
+
+                    label {
+                        margin-left: $spacing-sm;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    &.after-light {
+                        background: url('/assets/themes/after-light.jpg') no-repeat center center / cover;
+                    }
+
+                    &.aurora-drift {
+                        background: url('/assets/themes/aurora-drift.jpg') no-repeat center center / cover;
+                    }
+
+                    &.clarity {
+                        background: url('/assets/themes/clarity.jpg') no-repeat center center / cover;
+                    }
+                    
+                    &.deep-woods {
+                        background: url('/assets/themes/deep-woods.jpg') no-repeat center center / cover;
+                    }
+
+                    &.focus-chamber {
+                        background: url('/assets/themes/focus-chamber.jpg') no-repeat center center / cover;
+                    }
+                    
+                    &.golden-focus {
+                        background: url('/assets/themes/golden-focus.jpg') no-repeat center center / cover;
+                    }
+
+                    &.rainy-grind {
+                        background: url('/assets/themes/rainy-grind.jpg') no-repeat center center / cover;
+                    }
+
+                    &.zen-horizon {
+                        background: url('/assets/themes/zen-horizon.jpg') no-repeat center center / cover;
+                    }
+                }
+            }
+        }
+    
+        // Alert sound grid
+        .alert-options__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: $spacing-md;
+    
+            label {
+                display: flex;
+                align-items: center;
+                gap: $spacing-xxs;
+                cursor: pointer;
+    
+                input {
+                    accent-color: var(--color-settings-accent);
+                }
+            }
+        }
+
+        // Quote select
+        select {
+            width: 100%;
+            max-width: 300px;
+            padding: $spacing-xxs $spacing-xxs;
+            border-radius: 6px;
+            border: 1px solid var(--color-settings-accent);
+            background: transparent;
+            color: var(--color-settings-text);
+            margin-top: $spacing-xxs;
+        }
+    }
+}

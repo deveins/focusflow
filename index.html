@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FocusFlow – Productivity Timer</title>
+    <link rel="icon" href="./assets/logo/deveins-symbol.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <main class="app">
+
+        <header class="app__header">
+            <div class="app-brand">
+                <img src="./assets/logo/focusflow-logo.svg" alt="FocusFlow logo" class="app-brand__logo" />
+            </div>
+              
+            <div class="app-quote" aria-label="Motivational Quote">
+                <p class="app-quote__text" id="quote-text">“Stay focused and keep shipping.”</p>
+            </div>
+        </header>
+
+        <section class="mode-display">
+            <nav class="mode-tabs" role="tablist" aria-label="Focus Modes">
+                <button class="mode-tabs__button mode-tabs__button--active"
+                    data-mode="focus"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="panel-focus"
+                    id="tab-focus">
+                    Focus
+                </button>
+                <button class="mode-tabs__button"
+                    data-mode="short"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="panel-short"
+                    id="tab-short">
+                    Short Break
+                </button>
+                <button class="mode-tabs__button"
+                    data-mode="long"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="panel-long"
+                    id="tab-long">
+                    Long Break
+                </button>
+            </nav>
+            
+            <section class="timer active-panel" data-panel="focus" role="tabpanel" id="panel-focus" aria-labelledby="tab-focus">
+                <div class="timer__display" aria-live="polite">25:00</div>
+                <div class="timer__controls">
+                    <button class="timer__control timer__control--start" data-action="start">Start</button>
+                    <button class="timer__control timer__control--reset" data-action="reset">
+                        <img src="./assets/icons/reset.svg" alt="Reset Timer"/>
+                    </button>
+                </div>
+            </section>
+
+            <section class="timer" data-panel="short" role="tabpanel" id="panel-short" aria-labelledby="tab-short">
+                <div class="timer__display" aria-live="polite">05:00</div>
+                <div class="timer__controls">
+                    <button class="timer__control timer__control--start break-tab-start" data-action="start">Start</button>
+                    <button class="timer__control timer__control--skip break-tab-skip" data-action="skip">Skip Break</button>
+                    <button class="timer__control timer__control--reset" data-action="reset">
+                        <img src="./assets/icons/reset.svg" alt="Reset Timer"/>
+                    </button>
+                </div>
+            </section>
+
+            <section class="timer" data-panel="long" role="tabpanel" id="panel-long" aria-labelledby="tab-long">
+                <div class="timer__display" aria-live="polite">10:00</div>
+                <div class="timer__controls">
+                    <button class="timer__control timer__control--start break-tab-start" data-action="start">Start</button>
+                    <button class="timer__control timer__control--skip break-tab-skip" data-action="skip">Skip Break</button>
+                    <button class="timer__control timer__control--reset break-tab-reset" data-action="reset">
+                        <img src="./assets/icons/reset.svg" alt="Reset Timer"/>
+                    </button>
+                </div>
+            </section>
+        </section>
+
+        <footer class="app-footer">
+            <div class="app-footer__group app-footer__group--left">
+                <button class="footer__button" data-action="spotify" aria-label="Open Spotify" data-disabled>
+                    <img src="./assets/icons/music-note-icon.svg" alt="Spotify Music">
+                </button>
+                <button class="footer__button" data-action="sound" aria-label="Toggle Sound Menu" data-disabled>
+                    <img src="./assets/icons/sound-wave.svg" alt="Sounds">
+                </button>
+            </div>
+          
+            <div class="app-footer__group app-footer__group--right">
+                <button class="footer__button" data-action="log" aria-label="View Stats" data-disabled="">
+                    <img src="./assets/icons/stats-icon.svg" alt="Statistics">
+                </button>
+                <button class="footer__button" data-action="settings" aria-label="Open Settings">
+                    <img src="./assets/icons/settings-icon.svg" alt="Settings">
+                </button>
+            </div>
+
+            <div class="settings-panel">
+                <div class="settings-panel__header">
+                    <h2>Settings</h2>
+                    <button class="settings-panel__close" aria-label="Close Settings">x</button>
+                </div>
+
+                <div class="settings-panel__content">
+                    <aside class="settings-sidebar">
+                        <button class="settings-nav-item active-settings-sidebar" data-settings-tab="timer">Timer</button>
+                        <button class="settings-nav-item" data-settings-tab="theme">Themes</button>
+                        <button class="settings-nav-item" data-settings-tab="alerts">Alerts</button>
+                        <button class="settings-nav-item" data-settings-tab="quotes">Quotes</button>
+                    </aside>
+                    <div class="settings-main">
+                        <div class="settings-section active-settings-panel" data-settings-panel="timer">
+                            <section class="settings-group">
+                                <h3>Session Durations</h3>
+                                <div class="settings-group__inputs">
+                                    <div class="input-block">
+                                        <label for="focus">Focus Duration</label>
+                                        <div class="input-wrapper">
+                                            <input id="focus" type="number" min="1" max="60" value="25" data-setting="focus" />
+                                            <span class="unit">mins</span>
+                                        </div>
+                                    </div>
+                
+                                    <div class="input-block">
+                                        <label for="short">Short Break</label>
+                                        <div class="input-wrapper">
+                                            <input id="short" type="number" min="1" max="60" value="5" data-setting="short" />
+                                            <span class="unit">mins</span>
+                                        </div>
+                                    </div>
+                
+                                    <div class="input-block">
+                                        <label for="long">Long Break</label>
+                                        <div class="input-wrapper">
+                                            <input id="long" type="number" min="1" max="60" value="10" data-setting="long" />
+                                            <span class="unit">mins</span>
+                                        </div>
+                                    </div>
+                
+                                    <div class="auto-start">
+                                        <label><input type="checkbox" data-setting="autoBreak" /> Auto-start Break</label>
+                                        <label><input type="checkbox" data-setting="autoFocus" /> Auto-start Focus</label>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="settings-section" data-settings-panel="theme">
+                            <section class="settings-group theme-options">
+                                <h3>Theme</h3>
+                                <div class="theme-cards">
+                                    <div class="theme-card after-light" data-theme="after-light">
+                                        <label>After Light</label>
+                                    </div>
+                                    <div class="theme-card aurora-drift" data-theme="aurora-drift">
+                                        <label>Aurora Drift</label>
+                                    </div>
+                                    <div class="theme-card clarity" data-theme="clarity">
+                                        <label>Clarity</label>
+                                    </div>
+                                    <div class="theme-card deep-woods" data-theme="deep-woods">
+                                        <label>Deep Woods</label>
+                                    </div>
+                                    <div class="theme-card focus-chamber" data-theme="focus-chamber">
+                                        <label>Focus Chamber</label>
+                                    </div>
+                                    <div class="theme-card golden-focus" data-theme="golden-focus">
+                                        <label>Golden Focus</label>
+                                    </div>
+                                    <div class="theme-card rainy-grind" data-theme="rainy-grind">
+                                        <label>Rainy Grind</label>
+                                    </div>
+                                    <div class="theme-card zen-horizon" data-theme="zen-horizon">
+                                        <label>Zen Horizon</label>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="settings-section" data-settings-panel="alerts">
+                            <section class="settings-group">
+                                <h3>Alert Sound</h3>
+                                <div class="alert-options__grid">
+                                    <label><input type="radio" name="alertSound" value="arcade" /> Arcade</label>
+                                    <label><input type="radio" name="alertSound" value="bounce" /> Bounce</label>
+                                    <label><input type="radio" name="alertSound" value="chords" /> Chords</label>
+                                    <label><input type="radio" name="alertSound" value="clock" /> Clock</label>
+                                    <label><input type="radio" name="alertSound" value="clouds" /> Clouds</label>
+                                    <label><input type="radio" name="alertSound" value="dream-melody" /> Dream Melody</label>
+                                    <label><input type="radio" name="alertSound" value="universe" /> Universe</label>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="settings-section" data-settings-panel="quotes">
+                            <section class="settings-group">
+                                <h3>Quotes</h3>
+                                <label>
+                                    Quote Type:
+                                    <select data-setting="quoteType">
+                                        <option value="general">General</option>
+                                        <option value="motivational">Motivational</option>
+                                        <option value="inspirational">Inspirational</option>
+                                        <option value="gratitude">Gratitude</option>
+                                    </select>
+                                </label>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-overlay" id="modal-notice">
+                <div class="modal-box">
+                    <h4>🚧 System Upgrade Ongoing...</h4>
+                    <p>This function is currently unavailable!</p>
+                    <button class="modal-close" aria-label="Close modal">Close</button>
+                </div>
+            </div>
+
+        </footer>  
+
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
