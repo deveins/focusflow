@@ -275,28 +275,28 @@ a {
   transform: scale(1.1);
 }
 .settings-panel .settings-section .theme-options .theme-cards .theme-card.after-light {
-  background: url("./assets/themes/after-light.jpg") no-repeat center center/cover;
+  background: url("/assets/themes/after-light.jpg") no-repeat center center/cover;
 }
 .settings-panel .settings-section .theme-options .theme-cards .theme-card.aurora-drift {
-  background: url("./assets/themes/aurora-drift.jpg") no-repeat center center/cover;
+  background: url("/assets/themes/aurora-drift.jpg") no-repeat center center/cover;
 }
 .settings-panel .settings-section .theme-options .theme-cards .theme-card.clarity {
-  background: url("./assets/themes/clarity.jpg") no-repeat center center/cover;
+  background: url("/assets/themes/clarity.jpg") no-repeat center center/cover;
 }
 .settings-panel .settings-section .theme-options .theme-cards .theme-card.deep-woods {
-  background: url("./assets/themes/deep-woods.jpg") no-repeat center center/cover;
+  background: url("/assets/themes/deep-woods.jpg") no-repeat center center/cover;
 }
 .settings-panel .settings-section .theme-options .theme-cards .theme-card.focus-chamber {
-  background: url("./assets/themes/focus-chamber.jpg") no-repeat center center/cover;
+  background: url("/assets/themes/focus-chamber.jpg") no-repeat center center/cover;
 }
 .settings-panel .settings-section .theme-options .theme-cards .theme-card.golden-focus {
-  background: url("./assets/themes/golden-focus.jpg") no-repeat center center/cover;
+  background: url("/assets/themes/golden-focus.jpg") no-repeat center center/cover;
 }
 .settings-panel .settings-section .theme-options .theme-cards .theme-card.rainy-grind {
-  background: url("./assets/themes/rainy-grind.jpg") no-repeat center center/cover;
+  background: url("/assets/themes/rainy-grind.jpg") no-repeat center center/cover;
 }
 .settings-panel .settings-section .theme-options .theme-cards .theme-card.zen-horizon {
-  background: url("./assets/themes/zen-horizon.jpg") no-repeat center center/cover;
+  background: url("/assets/themes/zen-horizon.jpg") no-repeat center center/cover;
 }
 .settings-panel .settings-section .alert-options__grid {
   display: grid;
@@ -608,7 +608,7 @@ a {
 }
 
 .theme--after-light {
-  --background: url("./assets/themes/after-light.jpg");
+  --background: url("/assets/themes/after-light.jpg");
   --color-text: hsl(0, 0%, 96%);
   --color-button-border: hsl(0, 0%, 96%);
   --color-button-bg: hsl(187, 61%, 42%);
@@ -626,7 +626,7 @@ a {
 }
 
 .theme--aurora-drift {
-  --background: url("./assets/themes/aurora-drift.jpg");
+  --background: url("/assets/themes/aurora-drift.jpg");
   --color-text: hsl(0, 0%, 96%);
   --color-button-border: hsl(0, 0%, 96%);
   --color-button-bg: hsl(187, 61%, 42%);
@@ -644,7 +644,7 @@ a {
 }
 
 .theme--clarity {
-  --background: url("./assets/themes/clarity.jpg");
+  --background: url("/assets/themes/clarity.jpg");
   --color-text: hsl(0, 0%, 96%);
   --color-button-border: hsl(0, 0%, 96%);
   --color-button-bg: hsl(187, 61%, 42%);
@@ -662,7 +662,7 @@ a {
 }
 
 .theme--deep-woods {
-  --background: url("./assets/themes/deep-woods.jpg");
+  --background: url("/assets/themes/deep-woods.jpg");
   --color-text: hsl(0, 0%, 96%);
   --color-button-border: hsl(0, 0%, 96%);
   --color-button-bg: hsl(187, 61%, 42%);
@@ -680,7 +680,7 @@ a {
 }
 
 .theme--focus-chamber {
-  --background: url("./assets/themes/focus-chamber.jpg");
+  --background: url("/assets/themes/focus-chamber.jpg");
   --color-text: hsl(0, 0%, 96%);
   --color-button-border: hsl(0, 0%, 96%);
   --color-button-bg: hsl(187, 61%, 42%);
@@ -698,7 +698,7 @@ a {
 }
 
 :root {
-  --background: url("./assets/themes/golden-focus.jpg");
+  --background: url("/assets/themes/golden-focus.jpg");
   --color-text: hsl(0, 0%, 96%);
   --color-button-border: hsl(0, 0%, 96%);
   --color-button-bg: hsl(187, 61%, 42%);
@@ -716,7 +716,7 @@ a {
 }
 
 .theme--rainy-grind {
-  --background: url("./assets/themes/rainy-grind.jpg");
+  --background: url("/assets/themes/rainy-grind.jpg");
   --color-text: hsl(0, 0%, 96%);
   --color-button-border: hsl(0, 0%, 96%);
   --color-button-bg: hsl(187, 61%, 42%);
@@ -734,7 +734,7 @@ a {
 }
 
 .theme--zen-horizon {
-  --background: url("./assets/themes/zen-horizon.jpg");
+  --background: url("/assets/themes/zen-horizon.jpg");
   --color-text: hsl(0, 0%, 96%);
   --color-button-border: hsl(0, 0%, 96%);
   --color-button-bg: hsl(187, 61%, 42%);
